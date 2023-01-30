@@ -1,0 +1,138 @@
+
+/* Code adapted from a Youtube example:
+    https://www.youtube.com/watch?v=clwpf3VwCZQ&list=PLYXZEzgFn6y_V9oLUtSv_QooOT1JgJrTv&index=1&t=1173s
+*/
+
+
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+/* ------------------------------------- CSS: home.html --------------------------------*/
+/* define CSS variable */
+
+:root{
+    --textColor:#000;
+    --subtextColor:rgb(67, 67, 67);
+    --linkColor:#eb6f9f;
+    --borderColor:rgb(200, 199, 199);
+    --bgColor:rgb(249, 250,251);
+}
+
+body{
+    background-color: var(--bgColor);
+}
+
+*{  
+    color: var(--textColor);
+    font-family: 'Readex Pro';
+    line-height: 1.5em;
+    box-sizing: border-box;
+}
+
+/* class=container in layout.html */
+.container{
+    padding-left: 9rem;
+    padding-right: 9rem;
+}
+
+span, p, li{
+    color: var(--subtextColor);
+    font-size: 1em;
+}
+
+li{
+    line-height: 1.9em;
+}
+
+a{
+    color: var(--linkColor);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+/* body content  */
+
+.section--page{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+#wrapper-intro{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#about-me{
+    font-size: 48px;
+    line-height: 1em;
+}
+#intro,a{
+    font-weight: 300;
+}
+
+#profile-photo{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#social--list{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-wrap: wrap;
+}
+
+#social--list a{
+    font-size: 0.9em;
+    color: var(--textColor);
+}
+
+#social--list a:hover{
+    color: var(--linkColor);
+}
+
+#skill--list{
+    list-style: none;
+
+}
+
+#skill--list li{
+    margin-bottom: 1em;
+}
+
+#wrapper-techstack{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: 0.9em;
+}
+
+.item-techstack{
+    border: 1px solid var(--borderColor);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+
+
+/* Code adapted from a tutorial example on W3docs
+    https://www.w3docs.com/snippets/css/how-to-vertically-align-text-next-to-an-image.html
+*/
+.section--container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#work-list{
+    flex-basis: 40%;
+}
+#work-text{
+    font-size: 1em;
+    padding-left: 10%;
+}

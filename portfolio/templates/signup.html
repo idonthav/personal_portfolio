@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% block title %}Signup{% endblock %}
+{% block content %}
+<br>
+<br>
+
+<!---------------------------- link style.css into Homepage ------------------------------------->
+<link rel="stylesheet" href="/static/style_signup.css">
+
+
+<!---------------------------- Signup Form / Left ---------------------------------------------->
+<div class="wrapper">
+
+    <div class="wrapper-form">
+        <!-- Signup form code adapted from Yotube example:
+        https://www.youtube.com/watch?v=W4GItcW7W-U
+        -->
+        <form action="" method="post">
+            <h4 align="center"><strong>Sign Up</strong></h4>
+
+            <!-- import Bootstrap: Emial -->
+            <!-- code adapeted from Bootstrap example:
+                https://getbootstrap.com/docs/5.3/forms/overview/#overview
+            -->
+            <div class="mb-3">
+                <label for="emial" class="form-label">Email</label>
+                <!-- name is MUST HAVE, pass it to backend -->
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    name="email"   
+                    placeholder="Please enter your email"
+                    aria-describedby="emailHelp">
+
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+                <!-- import Bootstrap: User name -->
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <!-- name is MUST HAVE, pass it to backend -->
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="username" 
+                        name="username"   
+                        placeholder="Please enter your Username">
+                </div>
+
+            <!-- import Bootstrap: Password -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <!-- name is MUST HAVE, pass it to backend -->
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password1" 
+                    name="password1"   
+                    placeholder="Please enter your password">
+            </div>
+            
+            <div class="mb-3">
+                <label for="password" class="form-label">Repeat password</label>
+                <!-- name is MUST HAVE, pass it to backend -->
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password2" 
+                    name="password2"   
+                    placeholder="Please confirm your password">
+            </div>
+
+
+
+            <!-- Botton: Submit -->
+            <br>
+            <button type="submit" class="btn btn-dark" style="display: block; margin: 0 auto;">Sign up</button>
+        </form>
+    </div>
+
+<!---------------------------- Signup Form / Right ---------------------------------------------->
+
+    <div class="wrapper-text">
+        <p>:)</p>
+    </div>
+</div>
+
+{% endblock %}

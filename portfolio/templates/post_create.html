@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block title %}Post{% endblock %}
+{% block content %}
+<br>
+<br>
+
+<!-- Code adapted from Geeks example: 
+    https://www.geeksforgeeks.org/how-to-move-a-text-in-html/
+-->
+<marquee behavior="" direction=""><ion-icon name="chatbubble-ellipses-outline"></ion-icon> Would you like to say something to me (⓿_⓿)?</marquee>
+
+<br>
+<br>
+
+<!-- show all writer's sent messages -->
+<div id="posts">
+    <marquee behavior="alternate" direction="right"><h4>Hi! {{ username }}</h4></marquee>
+    
+    <br>
+    {% for post in posts %}
+    <div class="card border-dark">
+        <!-- header -->
+        <div class="card-header">
+            {% if user_email.id == post.writer %}
+            <!-- Button: delete -->
+            <div>
+                <a href="post-delete/{{ post.id }}">Delete</a>
+            </div>
+            {% else %}
+            <div>
+                <p>post by anonymous user</p>
+            </div>
+            {% endif %}
+        </div>
+        <!-- body & content-->
+        <div class="card-body">
+            <div class="card-text">{{ post.text }}</div>
+        </div>
+        <!-- footer -->
+        <div class="card-footer">{{ post.d1 }}</div>
+    </div>
+    <br>
+    {% endfor %}
+</div>
+
+<br>
+<br>
+
+<form method="post">
+    <textarea name="text" id="text" class="form-control" placeholder="At least 5 characters"></textarea>
+    <br>
+    <div align="center">
+        <button type="submit" class="btn btn-dark">Send Message</button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block title %}Xin's website{% endblock %}
+{% block content %}
+<br>
+<marquee behavior="" direction="">Ciao~ @{{ name }}👻 Thank for visiting my porfolio</marquee>
+<br>
+
+<!-- link style.css into Homepage -->
+<link rel="stylesheet" href="/static/style.css">
+
+<!-- Code adapted from a Youtube example:
+    https://www.youtube.com/watch?v=clwpf3VwCZQ&list=PLYXZEzgFn6y_V9oLUtSv_QooOT1JgJrTv&index=1&t=1173s
+-->
+
+<section id="wrapper-intro" class="section--page">
+    <img id="profile-photo" src="/static/images/profile photo.jpg" width="200px"/>
+
+    <div>
+        <h4 id="about-me">About me</h4>
+        <br>
+        <p id="intro">Current student major in Computing & IT Management, Cardiff University (expected graduate in Sep 2023)</p>
+        <p id="intro">I am currently switching my career into IT sectior after 8+ years professional experience in FMCG, Market research and Retail indutries</p>
+    </div>
+</section>
+
+<section class="section--page">
+    <div id="social--list">
+        <a href="https://www.linkedin.com/home" target="_blank">🌐Linkedin</a>
+        <a href="https://about.gitlab.com/" target="_blank">🌐Gitlab</a>
+        <a href="/static/download/Resume.pdf" target="_blank">🖨Download Resuma (pdf)</a>
+        <a href="mailto: cicizhso@gmail.comk?subject=Feedback&body=Dear blogger:" target="_blank">💌cicizhso@gmail.com</a>
+    </div>
+</section>
+
+ <!-- add tech stack lables -->
+ <section class="section--page">
+    <h2>Tech Stack lables</h2>
+    <br>
+    <div id="wrapper-techstack">
+        <!-- creat a box here for list the items -->
+        <div class="item-techstack"><span>JavaScript, HTML, CSS</span></div>
+        <div class="item-techstack"><span>Flask, Vue</span></div>
+        <div class="item-techstack"><span>C++, Python</span></div>
+    </div>
+</section>
+
+<!-- add skills & qualifications -->
+<section class="section--page">
+    <h2>Skills and Qualifications (Learning Modules)</h2>
+
+    <ul id="skill--list">
+        <li><strong>✔  Computational Thinking (Completed with 71/100):</strong>
+            <ul id="CMT119">
+                <li>Master fundamentals of HTML & CSS programming languages.</li>
+                <li>Master problem solving methods through process of decomposition, pattern recognition, abstraction, algorithms and data structure.</li>
+            </ul>
+        </li>
+        <li><strong>✔  Intermediate level in Python and JavaScript:</strong>
+            <ul id="CMT120">
+                <li>Master basic Python language skills, such as variables, List/tuple, functions, dictionary, class, and library/modules, etc.</li>
+                <li>Master basic JavaScript language skills, such as variables, array, functions, class, BOM, and DOM, etc.</li>
+                <li>Hands-on project experience of Python FLASK web development, such as knowledge of ORM, server-side templating language: Jinjia2, front-end language: JavaScript/HTML/CSS, knowledge of user authentication & authrization.</li>
+            </ul>
+        </li>
+        <li><strong>✔ Basic undersating of C++ programming language (self-study)</strong>
+            <ul id="self-study">
+                <li>As a self-study part of one of most widely-used object-oriented language, I have entry level knowledge of C++ variables, functions, classes.</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+<section class="section--container">
+    <div id="work-list">
+        <img id="work-img" src="/static/images/workhistory.png" width="450px">
+    </div>
+
+    <div id="work-text">
+        <strong><p>Hi! {{ name }}</p></strong> 
+        <p>Here is what I think of making a career change and starting a coding career. <br><br>
+        For me, the coolest part of coding is, that I can definitely created an visible work than my previous jobs.
+        It is not only because coding is a future-proof and lucrative profession, but also it is inclusive to anyone 
+        whoever you are and what class you come from. My previous experience has nothing to do with coding. 
+        I get ready to start from completely scratch. There were moments of collapse when I was not able to debug
+        my code. <br> While, eventually good result comes with persistance and hard-working. In many other industries, 
+        performance is hardly quantified and subjective. <br> 'In the realm of the scientific, it became "findable" by anyone'.
+        </p>
+    </div>
+</section>  
+
+{% endblock %}

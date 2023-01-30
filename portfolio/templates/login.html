@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<br>
+<br>
+
+<!------------------------- link style.css into Homepage ----------------------------------->
+<link rel="stylesheet" href="/static/style_login.css">
+
+
+<!------------------------- Login Form / left ---------------------------------------------->
+
+<div class="wrapper">
+
+    <!-- form code adapted from an example on Bootstarp:
+        https://getbootstrap.com/docs/5.3/forms/overview/#overview
+    -->
+
+    <div class="wrapper-form">
+        <form action="" method="post" >
+            <h4 align="center"><strong>Login</strong></h4>
+            <br>
+            <br>
+
+            <!-- import Bootstrap Code and adapted it: Emial -->
+            <div class="mb-3">
+                <label for="emial" class="form-label">Email address</label>
+                <!-- name is MUST HAVE, pass it to backend -->
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    name="email"   
+                    placeholder="Please enter your email address"
+                    aria-describedby="emailHelp">
+
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <!-- import Bootstrap Code and adapted it: Password -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <!-- name is MUST HAVE, pass it to backend -->
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password" 
+                    name="password"   
+                    placeholder="Please enter your password">
+            </div>
+            <!-- Botton: Submit -->
+            <br>
+            <button type="submit" class="btn btn-dark" style="display: block; margin: 0 auto;">Login</button>
+        </form>
+    </div>
+
+
+<!------------------------- Login Picture / Right ------------------------------------------->
+
+    <div class="wrapper-img">
+        <img id='login-img' src="/static/images/login.jpg" width="500px">
+    </div>   
+</div>
+
+{% endblock %}

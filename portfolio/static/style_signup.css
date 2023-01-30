@@ -1,0 +1,27 @@
+/* ---------------------------- CSS: signup.html--------------------------------*/
+.wrapper{
+    padding: 3rem;
+    padding-left: 7%;
+    
+}
+.wrapper-form{
+    display: inline-block;
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+body{
+    background-image: url("images/wallpaper.png");
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-text{
+    display: inline-block;
+    padding: 1rem;
+    vertical-align: middle;
+    padding-left: 45%;
+    font-size: 7em;
+    color: aliceblue;
+}
+
